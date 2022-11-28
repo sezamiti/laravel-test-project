@@ -9,7 +9,7 @@
         <a href="{{route('post.edit', $post->id)}}">Edit</a>
     </div>
     <div>
-        <form action="{{route('post.delete', $post->id)}}" method="post">
+        <form action="{{route('post.destroy', $post->id)}}" method="post">
             @csrf
             @method('delete')
             <input type="submit" value="delete" class="btn btn-danger">
