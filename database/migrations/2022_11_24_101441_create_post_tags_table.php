@@ -13,11 +13,11 @@ class CreatePostTagsTable extends Migration
      */
     public function up()
     {
-        Schema::create('post_tags', function (Blueprint $table) {
+        Schema::create('post_tag', function (Blueprint $table) {
             $table->id();
 
             $table->unsignedBigInteger('post_id');
-            $table->unsignedSmallInteger('tag_id');
+            $table->unsignedBigInteger('tag_id');
 
             $table->index('post_id', 'post_tag_post_idx');
             $table->index('tag_id', 'post_tag_tag_idx');

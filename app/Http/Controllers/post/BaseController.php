@@ -4,9 +4,10 @@
 namespace App\Http\Controllers\Post;
 
 
+use App\Http\Controllers\Controller;
 use App\Service\Post\Service;
 
-class BaseController
+class BaseController extends Controller
 {
     public $service;
 
